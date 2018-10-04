@@ -1,0 +1,63 @@
+
+{% block content%}
+<!DOCTYPE html>
+<html>
+<head>
+        {% load static %}
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>QUOTEE   |   Add your Quote</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/t.css' %}">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<script src="main.js"></script>
+</head>
+<body class="bg-danger">
+    <div class="row">
+    <div class="col-lg-4 col-md-12 col-sx-12"></div>
+    <div class="col-lg-4 col-md-12 col-sx-12"><h1>QUOTEE</h1><br>
+    <form action="" method="POST" style="">{% csrf_token %}
+        <button type="submit" class="btn btn-light but1"  value="Add quote">Sign Up</button>
+        </form>    
+         <br>
+    <form action="/input" method="POST" style="">{% csrf_token %}
+    <button type="submit" class="btn btn-light but1"  value="Add quote">Add quote</button>
+    </form>
+    <br>
+        <form action="/display" method="POST" style="">{% csrf_token %}    
+        <button type="submit" class="btn btn-light but2" value="Read quotes">Read quotes</button>
+    </form>
+    </div>
+    <div class="col-lg-4 col-md-12 col-sx-12"></div>    
+    
+</div>
+</body>
+</html>
+<style>
+h1{
+transform:translateX(12%) translateY(165%);
+color:white;
+font-size:68px;
+font-family: 'Audiowide', cursive;
+
+}
+.but1{
+transform:translateX(56%) translateY(435%);
+width: 200px;
+font-family: 'PT Sans', sans-serif;
+font-size: 18px;
+}
+.but2{
+transform:translateX(56%) translateY(535%);
+width: 200px;
+font-family: 'PT Sans', sans-serif;
+font-size: 18px;
+}
+
+</style>
+
+
+{% endblock %}

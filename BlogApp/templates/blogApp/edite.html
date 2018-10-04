@@ -1,0 +1,12 @@
+
+{% block content %}
+                  <form method="POST" action="/update/{{qoute.id}}">
+    fyfygygygy
+                    {% csrf_token%}
+<label for='name'><input type="text" name="text" value=" {{qoute.text}}" placeholder=" {{qoute.text}}"></label>
+<label for='author'><input type="textarea" name="author" value="{{qoute.author}}" placeholder="{{qoute.author}}"></label>
+<label for='title'><input type="textarea" name="title" value="{{qoute.title}}" placeholder="{{qoute.author}}"></label>
+
+<input type="submit" name="update" value="updat">
+</form>         
+{% endblock %}
